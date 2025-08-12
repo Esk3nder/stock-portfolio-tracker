@@ -1,16 +1,17 @@
-# Stock Portfolio Tracker
+# Eight Pillars Elite Stock Screener
 
-A React application for tracking stock portfolios with real-time data from Alpha Vantage API.
+A sophisticated React application for screening and analyzing stocks using the Eight Pillars Framework - a systematic approach to identifying elite compounding equities.
 
 ## Features
 
-- 🔍 Search and add stocks to your portfolio
-- 📊 Real-time stock price updates
-- 💼 Track portfolio value and daily changes
-- 📈 Set number of shares for each stock
-- 🔄 Manual and automatic refresh options
-- 💾 Persistent storage using localStorage
-- 📱 Responsive design
+- 🎯 **Eight Pillars Framework**: Comprehensive stock analysis across 8 critical dimensions
+- 🔍 **Smart Screening**: Batch analyze multiple stocks simultaneously
+- 📊 **Visual Analytics**: Interactive charts and dashboards for analysis results
+- 💼 **Portfolio Management**: Track and optimize holdings based on Eight Pillars scores
+- 📈 **Real-time Data**: Integration with Financial Modeling Prep for comprehensive financials
+- 📚 **Framework Guide**: Built-in documentation and methodology explanation
+- 💾 **Persistent Storage**: Save screening results and portfolio data
+- 📱 **Responsive Design**: Works seamlessly on desktop and mobile
 
 ## Getting Started
 
@@ -33,20 +34,44 @@ npm start
 
 ## API Configuration
 
-The app uses Alpha Vantage's free API. To use your own API key:
+The app requires a Financial Modeling Prep (FMP) API key for comprehensive financial data:
 
-1. Get a free API key from [Alpha Vantage](https://www.alphavantage.co/support/#api-key)
-2. Update `src/config/api.js`:
-```javascript
-export const API_KEY = 'your-api-key-here';
-```
+1. **Get an API Key**: Sign up at [Financial Modeling Prep](https://financialmodelingprep.com/developer)
+   - Free tier: 250 API calls/day
+   - Paid tiers: $14-299/month for higher limits
+
+2. **Configure Environment Variables**:
+   ```bash
+   # Copy the example file
+   cp .env.example .env
+   
+   # Edit .env and add your API key
+   REACT_APP_FMP_API_KEY=your_fmp_api_key_here
+   ```
+
+3. **Optional Additional APIs** (for fallback/enhanced data):
+   - Alpha Vantage: [Get key](https://www.alphavantage.co/support/#api-key)
+   - Polygon.io: [Get key](https://polygon.io/dashboard/api-keys)
+
+## The Eight Pillars Framework
+
+The app analyzes stocks across eight critical dimensions:
+
+1. **Moat Test**: ROIC > 20% - Sustainable competitive advantages
+2. **Fortress Test**: Debt/EBITDA < 2.5x - Financial strength
+3. **Engine Test**: Revenue CAGR > 10% - Growth momentum
+4. **Efficiency Test**: Rule of 40 > 40% - Balance of growth and profitability
+5. **Pricing Power Test**: High gross margins - Competitive differentiation
+6. **Capital Allocation Test**: ROE improvement + disciplined buybacks
+7. **Cash Generation Test**: FCF margin > 15% + conversion > 80%
+8. **Durability Test**: Growing market share in expanding TAMs
 
 ## Usage Notes
 
-- **Free Tier Limitations**: 5 API calls per minute, 500 calls per day
-- **Demo API Key**: The default 'demo' key only works with specific symbols (IBM, TSLA, AAPL)
-- **Auto-refresh**: Updates all stocks every minute when enabled
-- **Data Persistence**: Portfolio data is saved in browser's localStorage
+- **API Rate Limits**: FMP free tier allows 250 calls/day
+- **Batch Analysis**: Screen multiple stocks by entering symbols separated by commas
+- **Data Persistence**: Screening results and portfolio data saved in localStorage
+- **Real-time Updates**: Financial data refreshed on each analysis request
 
 ## Tech Stack
 
