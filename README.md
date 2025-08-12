@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Stock Portfolio Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application for tracking stock portfolios with real-time data from Alpha Vantage API.
+
+## Features
+
+- 🔍 Search and add stocks to your portfolio
+- 📊 Real-time stock price updates
+- 💼 Track portfolio value and daily changes
+- 📈 Set number of shares for each stock
+- 🔄 Manual and automatic refresh options
+- 💾 Persistent storage using localStorage
+- 📱 Responsive design
+
+## Getting Started
+
+1. Clone and navigate to the project:
+```bash
+cd stock-portfolio-tracker
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## API Configuration
+
+The app uses Alpha Vantage's free API. To use your own API key:
+
+1. Get a free API key from [Alpha Vantage](https://www.alphavantage.co/support/#api-key)
+2. Update `src/config/api.js`:
+```javascript
+export const API_KEY = 'your-api-key-here';
+```
+
+## Usage Notes
+
+- **Free Tier Limitations**: 5 API calls per minute, 500 calls per day
+- **Demo API Key**: The default 'demo' key only works with specific symbols (IBM, TSLA, AAPL)
+- **Auto-refresh**: Updates all stocks every minute when enabled
+- **Data Persistence**: Portfolio data is saved in browser's localStorage
+
+## Tech Stack
+
+- React 18
+- Axios for API calls
+- Recharts for data visualization
+- CSS Grid for responsive layout
+- localStorage for data persistence
+
+## Project Structure
+
+```
+src/
+├── components/        # React components
+│   ├── StockSearch.js    # Stock search functionality
+│   ├── StockCard.js      # Individual stock display
+│   └── PortfolioSummary.js # Portfolio overview
+├── services/         # API services
+│   └── stockService.js   # Alpha Vantage API integration
+├── hooks/           # Custom React hooks
+│   └── usePortfolio.js   # Portfolio state management
+└── config/          # Configuration files
+    └── api.js           # API settings
+```
 
 ## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `npm start` - Run development server
+- `npm test` - Run tests
+- `npm run build` - Build for production
+- `npm run eject` - Eject from Create React App
