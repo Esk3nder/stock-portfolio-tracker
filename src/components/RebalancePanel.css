@@ -1,0 +1,159 @@
+.rebalance-panel {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rebalance-panel h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.rebalance-info {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+}
+
+.rebalance-info p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.rebalance-info ul {
+  margin-left: 20px;
+  color: #666;
+}
+
+.rebalance-info li {
+  margin-bottom: 5px;
+}
+
+.rebalance-controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.rebalance-button {
+  padding: 12px 30px;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: white;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rebalance-button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.rebalance-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.rebalance-button.loading {
+  background-color: #ff9800;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.status-message {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.status-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.last-run-info {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e3f2fd;
+  border-radius: 6px;
+}
+
+.last-run-info h3 {
+  margin-bottom: 10px;
+  color: #1976d2;
+  font-size: 1em;
+}
+
+.run-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail .label {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.detail .value {
+  font-weight: 600;
+  color: #333;
+}
+
+.detail .value.success {
+  color: #4caf50;
+}
+
+.detail .value.error {
+  color: #f44336;
+}
+
+.rebalance-note {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 6px;
+}
+
+.rebalance-note p {
+  margin: 0;
+  color: #856404;
+  font-size: 0.9em;
+}
