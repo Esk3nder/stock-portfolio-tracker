@@ -1,0 +1,1443 @@
+{
+  "version": "1.0.0",
+  "created": "2025-08-12T06:58:02.215Z",
+  "lastUpdated": "2025-08-12T07:03:36.559Z",
+  "stocks": {
+    "AAPL": {
+      "symbol": "AAPL",
+      "analyses": [
+        {
+          "symbol": "AAPL",
+          "companyName": "Apple Inc.",
+          "sector": "Technology",
+          "industry": "Consumer Electronics",
+          "analysisDate": "2025-08-12T06:55:56.673Z",
+          "pillars": {
+            "moat": {
+              "name": "Moat Test (ROIC > 20%)",
+              "value": 44.30708117427921,
+              "threshold": 20,
+              "passes": true,
+              "details": "ROIC: 44.31%"
+            },
+            "fortress": {
+              "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+              "value": 0,
+              "threshold": 2.5,
+              "passes": true,
+              "details": "Debt/EBITDA: 0.00x"
+            },
+            "engine": {
+              "name": "Engine Test (Revenue CAGR > 10%)",
+              "value": -0.27914234575269203,
+              "threshold": 10,
+              "passes": false,
+              "details": "3-Year Revenue CAGR: -0.28%"
+            },
+            "efficiency": {
+              "name": "Efficiency Test (Rule of 40)",
+              "value": 36.459064927949505,
+              "threshold": 40,
+              "passes": false,
+              "details": "Rule of 40: 36.46% (Growth: 2.0% + EBITDA Margin: 34.4%)"
+            },
+            "pricingPower": {
+              "name": "Pricing Power Test (Gross Margin)",
+              "value": 46.206349815233935,
+              "threshold": 70,
+              "passes": false,
+              "details": "Gross Margin: 46.21% (Industry threshold: 70%)"
+            },
+            "capitalAllocation": {
+              "name": "Capital Allocation Test (ROE)",
+              "value": 164.59350307287096,
+              "threshold": 20,
+              "passes": true,
+              "details": "ROE: 164.59%"
+            },
+            "cashGeneration": {
+              "name": "Cash Generation Test (FCF)",
+              "value": 27.825386474356517,
+              "threshold": 15,
+              "passes": true,
+              "details": "FCF Margin: 27.83%, FCF Conversion: 116.08%"
+            },
+            "durability": {
+              "name": "Durability Test (Market Position)",
+              "value": 37.287278415656736,
+              "threshold": "Qualitative",
+              "passes": false,
+              "details": "P/E: 37.29, Market Cap: $3495.16B"
+            }
+          },
+          "summary": {
+            "totalScore": 4,
+            "totalPillars": 8,
+            "passedPillars": [
+              "Moat Test (ROIC > 20%)",
+              "Fortress Test (Debt/EBITDA < 2.5x)",
+              "Capital Allocation Test (ROE)",
+              "Cash Generation Test (FCF)"
+            ],
+            "failedPillars": [
+              "Engine Test (Revenue CAGR > 10%)",
+              "Efficiency Test (Rule of 40)",
+              "Pricing Power Test (Gross Margin)",
+              "Durability Test (Market Position)"
+            ],
+            "meetsFramework": false,
+            "rating": "Mixed Signals",
+            "recommendation": "Hold"
+          },
+          "timestamp": "2025-08-12T06:58:02.228Z"
+        }
+      ],
+      "latestAnalysis": {
+        "symbol": "AAPL",
+        "companyName": "Apple Inc.",
+        "sector": "Technology",
+        "industry": "Consumer Electronics",
+        "analysisDate": "2025-08-12T06:55:56.673Z",
+        "pillars": {
+          "moat": {
+            "name": "Moat Test (ROIC > 20%)",
+            "value": 44.30708117427921,
+            "threshold": 20,
+            "passes": true,
+            "details": "ROIC: 44.31%"
+          },
+          "fortress": {
+            "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+            "value": 0,
+            "threshold": 2.5,
+            "passes": true,
+            "details": "Debt/EBITDA: 0.00x"
+          },
+          "engine": {
+            "name": "Engine Test (Revenue CAGR > 10%)",
+            "value": -0.27914234575269203,
+            "threshold": 10,
+            "passes": false,
+            "details": "3-Year Revenue CAGR: -0.28%"
+          },
+          "efficiency": {
+            "name": "Efficiency Test (Rule of 40)",
+            "value": 36.459064927949505,
+            "threshold": 40,
+            "passes": false,
+            "details": "Rule of 40: 36.46% (Growth: 2.0% + EBITDA Margin: 34.4%)"
+          },
+          "pricingPower": {
+            "name": "Pricing Power Test (Gross Margin)",
+            "value": 46.206349815233935,
+            "threshold": 70,
+            "passes": false,
+            "details": "Gross Margin: 46.21% (Industry threshold: 70%)"
+          },
+          "capitalAllocation": {
+            "name": "Capital Allocation Test (ROE)",
+            "value": 164.59350307287096,
+            "threshold": 20,
+            "passes": true,
+            "details": "ROE: 164.59%"
+          },
+          "cashGeneration": {
+            "name": "Cash Generation Test (FCF)",
+            "value": 27.825386474356517,
+            "threshold": 15,
+            "passes": true,
+            "details": "FCF Margin: 27.83%, FCF Conversion: 116.08%"
+          },
+          "durability": {
+            "name": "Durability Test (Market Position)",
+            "value": 37.287278415656736,
+            "threshold": "Qualitative",
+            "passes": false,
+            "details": "P/E: 37.29, Market Cap: $3495.16B"
+          }
+        },
+        "summary": {
+          "totalScore": 4,
+          "totalPillars": 8,
+          "passedPillars": [
+            "Moat Test (ROIC > 20%)",
+            "Fortress Test (Debt/EBITDA < 2.5x)",
+            "Capital Allocation Test (ROE)",
+            "Cash Generation Test (FCF)"
+          ],
+          "failedPillars": [
+            "Engine Test (Revenue CAGR > 10%)",
+            "Efficiency Test (Rule of 40)",
+            "Pricing Power Test (Gross Margin)",
+            "Durability Test (Market Position)"
+          ],
+          "meetsFramework": false,
+          "rating": "Mixed Signals",
+          "recommendation": "Hold"
+        },
+        "timestamp": "2025-08-12T06:58:02.228Z"
+      },
+      "firstAdded": "2025-08-12T06:58:02.228Z",
+      "lastUpdated": "2025-08-12T06:58:02.228Z"
+    },
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "analyses": [
+        {
+          "symbol": "GOOGL",
+          "companyName": "Alphabet Inc.",
+          "sector": "Communication Services",
+          "industry": "Internet Content & Information",
+          "analysisDate": "2025-08-12T06:56:00.195Z",
+          "pillars": {
+            "moat": {
+              "name": "Moat Test (ROIC > 20%)",
+              "value": 25.798960413070894,
+              "threshold": 20,
+              "passes": true,
+              "details": "ROIC: 25.80%"
+            },
+            "fortress": {
+              "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+              "value": 0,
+              "threshold": 2.5,
+              "passes": true,
+              "details": "Debt/EBITDA: 0.00x"
+            },
+            "engine": {
+              "name": "Engine Test (Revenue CAGR > 10%)",
+              "value": 7.362322424538048,
+              "threshold": 10,
+              "passes": false,
+              "details": "3-Year Revenue CAGR: 7.36%"
+            },
+            "efficiency": {
+              "name": "Efficiency Test (Rule of 40)",
+              "value": 52.54825396235438,
+              "threshold": 40,
+              "passes": true,
+              "details": "Rule of 40: 52.55% (Growth: 13.9% + EBITDA Margin: 38.7%)"
+            },
+            "pricingPower": {
+              "name": "Pricing Power Test (Gross Margin)",
+              "value": 58.20043540617911,
+              "threshold": 40,
+              "passes": true,
+              "details": "Gross Margin: 58.20% (Industry threshold: 40%)"
+            },
+            "capitalAllocation": {
+              "name": "Capital Allocation Test (ROE)",
+              "value": 30.797578472025695,
+              "threshold": 20,
+              "passes": true,
+              "details": "ROE: 30.80%"
+            },
+            "cashGeneration": {
+              "name": "Cash Generation Test (FCF)",
+              "value": 20.788645155392008,
+              "threshold": 15,
+              "passes": false,
+              "details": "FCF Margin: 20.79%, FCF Conversion: 72.68%"
+            },
+            "durability": {
+              "name": "Durability Test (Market Position)",
+              "value": 23.292381989252682,
+              "threshold": "Qualitative",
+              "passes": true,
+              "details": "P/E: 23.29, Market Cap: $2331.99B"
+            }
+          },
+          "summary": {
+            "totalScore": 6,
+            "totalPillars": 8,
+            "passedPillars": [
+              "Moat Test (ROIC > 20%)",
+              "Fortress Test (Debt/EBITDA < 2.5x)",
+              "Efficiency Test (Rule of 40)",
+              "Pricing Power Test (Gross Margin)",
+              "Capital Allocation Test (ROE)",
+              "Durability Test (Market Position)"
+            ],
+            "failedPillars": [
+              "Engine Test (Revenue CAGR > 10%)",
+              "Cash Generation Test (FCF)"
+            ],
+            "meetsFramework": true,
+            "rating": "Quality Growth",
+            "recommendation": "Buy"
+          },
+          "timestamp": "2025-08-12T06:58:02.229Z"
+        }
+      ],
+      "latestAnalysis": {
+        "symbol": "GOOGL",
+        "companyName": "Alphabet Inc.",
+        "sector": "Communication Services",
+        "industry": "Internet Content & Information",
+        "analysisDate": "2025-08-12T06:56:00.195Z",
+        "pillars": {
+          "moat": {
+            "name": "Moat Test (ROIC > 20%)",
+            "value": 25.798960413070894,
+            "threshold": 20,
+            "passes": true,
+            "details": "ROIC: 25.80%"
+          },
+          "fortress": {
+            "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+            "value": 0,
+            "threshold": 2.5,
+            "passes": true,
+            "details": "Debt/EBITDA: 0.00x"
+          },
+          "engine": {
+            "name": "Engine Test (Revenue CAGR > 10%)",
+            "value": 7.362322424538048,
+            "threshold": 10,
+            "passes": false,
+            "details": "3-Year Revenue CAGR: 7.36%"
+          },
+          "efficiency": {
+            "name": "Efficiency Test (Rule of 40)",
+            "value": 52.54825396235438,
+            "threshold": 40,
+            "passes": true,
+            "details": "Rule of 40: 52.55% (Growth: 13.9% + EBITDA Margin: 38.7%)"
+          },
+          "pricingPower": {
+            "name": "Pricing Power Test (Gross Margin)",
+            "value": 58.20043540617911,
+            "threshold": 40,
+            "passes": true,
+            "details": "Gross Margin: 58.20% (Industry threshold: 40%)"
+          },
+          "capitalAllocation": {
+            "name": "Capital Allocation Test (ROE)",
+            "value": 30.797578472025695,
+            "threshold": 20,
+            "passes": true,
+            "details": "ROE: 30.80%"
+          },
+          "cashGeneration": {
+            "name": "Cash Generation Test (FCF)",
+            "value": 20.788645155392008,
+            "threshold": 15,
+            "passes": false,
+            "details": "FCF Margin: 20.79%, FCF Conversion: 72.68%"
+          },
+          "durability": {
+            "name": "Durability Test (Market Position)",
+            "value": 23.292381989252682,
+            "threshold": "Qualitative",
+            "passes": true,
+            "details": "P/E: 23.29, Market Cap: $2331.99B"
+          }
+        },
+        "summary": {
+          "totalScore": 6,
+          "totalPillars": 8,
+          "passedPillars": [
+            "Moat Test (ROIC > 20%)",
+            "Fortress Test (Debt/EBITDA < 2.5x)",
+            "Efficiency Test (Rule of 40)",
+            "Pricing Power Test (Gross Margin)",
+            "Capital Allocation Test (ROE)",
+            "Durability Test (Market Position)"
+          ],
+          "failedPillars": [
+            "Engine Test (Revenue CAGR > 10%)",
+            "Cash Generation Test (FCF)"
+          ],
+          "meetsFramework": true,
+          "rating": "Quality Growth",
+          "recommendation": "Buy"
+        },
+        "timestamp": "2025-08-12T06:58:02.229Z"
+      },
+      "firstAdded": "2025-08-12T06:58:02.229Z",
+      "lastUpdated": "2025-08-12T06:58:02.229Z"
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "analyses": [
+        {
+          "symbol": "MSFT",
+          "companyName": "Microsoft Corporation",
+          "sector": "Technology",
+          "industry": "Software - Infrastructure",
+          "analysisDate": "2025-08-12T06:55:58.433Z",
+          "pillars": {
+            "moat": {
+              "name": "Moat Test (ROIC > 20%)",
+              "value": 21.6332852072172,
+              "threshold": 20,
+              "passes": true,
+              "details": "ROIC: 21.63%"
+            },
+            "fortress": {
+              "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+              "value": 0,
+              "threshold": 2.5,
+              "passes": true,
+              "details": "Debt/EBITDA: 0.00x"
+            },
+            "engine": {
+              "name": "Engine Test (Revenue CAGR > 10%)",
+              "value": 9.956451481946127,
+              "threshold": 10,
+              "passes": false,
+              "details": "3-Year Revenue CAGR: 9.96%"
+            },
+            "efficiency": {
+              "name": "Efficiency Test (Rule of 40)",
+              "value": 71.78389765308796,
+              "threshold": 40,
+              "passes": true,
+              "details": "Rule of 40: 71.78% (Growth: 14.9% + EBITDA Margin: 56.9%)"
+            },
+            "pricingPower": {
+              "name": "Pricing Power Test (Gross Margin)",
+              "value": 68.8237423861652,
+              "threshold": 70,
+              "passes": false,
+              "details": "Gross Margin: 68.82% (Industry threshold: 70%)"
+            },
+            "capitalAllocation": {
+              "name": "Capital Allocation Test (ROE)",
+              "value": 29.647227341409522,
+              "threshold": 20,
+              "passes": true,
+              "details": "ROE: 29.65%"
+            },
+            "cashGeneration": {
+              "name": "Cash Generation Test (FCF)",
+              "value": 25.418849654271558,
+              "threshold": 15,
+              "passes": false,
+              "details": "FCF Margin: 25.42%, FCF Conversion: 70.32%"
+            },
+            "durability": {
+              "name": "Durability Test (Market Position)",
+              "value": 36.307334924188865,
+              "threshold": "Qualitative",
+              "passes": false,
+              "details": "P/E: 36.31, Market Cap: $3697.25B"
+            }
+          },
+          "summary": {
+            "totalScore": 4,
+            "totalPillars": 8,
+            "passedPillars": [
+              "Moat Test (ROIC > 20%)",
+              "Fortress Test (Debt/EBITDA < 2.5x)",
+              "Efficiency Test (Rule of 40)",
+              "Capital Allocation Test (ROE)"
+            ],
+            "failedPillars": [
+              "Engine Test (Revenue CAGR > 10%)",
+              "Pricing Power Test (Gross Margin)",
+              "Cash Generation Test (FCF)",
+              "Durability Test (Market Position)"
+            ],
+            "meetsFramework": false,
+            "rating": "Mixed Signals",
+            "recommendation": "Hold"
+          },
+          "timestamp": "2025-08-12T06:58:02.229Z"
+        }
+      ],
+      "latestAnalysis": {
+        "symbol": "MSFT",
+        "companyName": "Microsoft Corporation",
+        "sector": "Technology",
+        "industry": "Software - Infrastructure",
+        "analysisDate": "2025-08-12T06:55:58.433Z",
+        "pillars": {
+          "moat": {
+            "name": "Moat Test (ROIC > 20%)",
+            "value": 21.6332852072172,
+            "threshold": 20,
+            "passes": true,
+            "details": "ROIC: 21.63%"
+          },
+          "fortress": {
+            "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+            "value": 0,
+            "threshold": 2.5,
+            "passes": true,
+            "details": "Debt/EBITDA: 0.00x"
+          },
+          "engine": {
+            "name": "Engine Test (Revenue CAGR > 10%)",
+            "value": 9.956451481946127,
+            "threshold": 10,
+            "passes": false,
+            "details": "3-Year Revenue CAGR: 9.96%"
+          },
+          "efficiency": {
+            "name": "Efficiency Test (Rule of 40)",
+            "value": 71.78389765308796,
+            "threshold": 40,
+            "passes": true,
+            "details": "Rule of 40: 71.78% (Growth: 14.9% + EBITDA Margin: 56.9%)"
+          },
+          "pricingPower": {
+            "name": "Pricing Power Test (Gross Margin)",
+            "value": 68.8237423861652,
+            "threshold": 70,
+            "passes": false,
+            "details": "Gross Margin: 68.82% (Industry threshold: 70%)"
+          },
+          "capitalAllocation": {
+            "name": "Capital Allocation Test (ROE)",
+            "value": 29.647227341409522,
+            "threshold": 20,
+            "passes": true,
+            "details": "ROE: 29.65%"
+          },
+          "cashGeneration": {
+            "name": "Cash Generation Test (FCF)",
+            "value": 25.418849654271558,
+            "threshold": 15,
+            "passes": false,
+            "details": "FCF Margin: 25.42%, FCF Conversion: 70.32%"
+          },
+          "durability": {
+            "name": "Durability Test (Market Position)",
+            "value": 36.307334924188865,
+            "threshold": "Qualitative",
+            "passes": false,
+            "details": "P/E: 36.31, Market Cap: $3697.25B"
+          }
+        },
+        "summary": {
+          "totalScore": 4,
+          "totalPillars": 8,
+          "passedPillars": [
+            "Moat Test (ROIC > 20%)",
+            "Fortress Test (Debt/EBITDA < 2.5x)",
+            "Efficiency Test (Rule of 40)",
+            "Capital Allocation Test (ROE)"
+          ],
+          "failedPillars": [
+            "Engine Test (Revenue CAGR > 10%)",
+            "Pricing Power Test (Gross Margin)",
+            "Cash Generation Test (FCF)",
+            "Durability Test (Market Position)"
+          ],
+          "meetsFramework": false,
+          "rating": "Mixed Signals",
+          "recommendation": "Hold"
+        },
+        "timestamp": "2025-08-12T06:58:02.229Z"
+      },
+      "firstAdded": "2025-08-12T06:58:02.229Z",
+      "lastUpdated": "2025-08-12T06:58:02.229Z"
+    },
+    "V": {
+      "symbol": "V",
+      "analyses": [
+        {
+          "symbol": "V",
+          "companyName": "Visa Inc.",
+          "sector": "Financial Services",
+          "industry": "Financial - Credit Services",
+          "analysisDate": "2025-08-12T06:55:42.817Z",
+          "pillars": {
+            "moat": {
+              "name": "Moat Test (ROIC > 20%)",
+              "value": 28.64665986658219,
+              "threshold": 20,
+              "passes": true,
+              "details": "ROIC: 28.65%"
+            },
+            "fortress": {
+              "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+              "value": 0,
+              "threshold": 2.5,
+              "passes": true,
+              "details": "Debt/EBITDA: 0.00x"
+            },
+            "engine": {
+              "name": "Engine Test (Revenue CAGR > 10%)",
+              "value": 7.019852738392451,
+              "threshold": 10,
+              "passes": false,
+              "details": "3-Year Revenue CAGR: 7.02%"
+            },
+            "efficiency": {
+              "name": "Efficiency Test (Rule of 40)",
+              "value": 81.25611483538287,
+              "threshold": 40,
+              "passes": true,
+              "details": "Rule of 40: 81.26% (Growth: 10.0% + EBITDA Margin: 71.2%)"
+            },
+            "pricingPower": {
+              "name": "Pricing Power Test (Gross Margin)",
+              "value": 80.3985971162946,
+              "threshold": 40,
+              "passes": true,
+              "details": "Gross Margin: 80.40% (Industry threshold: 40%)"
+            },
+            "capitalAllocation": {
+              "name": "Capital Allocation Test (ROE)",
+              "value": 50.4458696374275,
+              "threshold": 20,
+              "passes": true,
+              "details": "ROE: 50.45%"
+            },
+            "cashGeneration": {
+              "name": "Cash Generation Test (FCF)",
+              "value": 52.03195457328954,
+              "threshold": 15,
+              "passes": true,
+              "details": "FCF Margin: 52.03%, FCF Conversion: 94.68%"
+            },
+            "durability": {
+              "name": "Durability Test (Market Position)",
+              "value": 28.25677708554931,
+              "threshold": "Qualitative",
+              "passes": true,
+              "details": "P/E: 28.26, Market Cap: $557.87B"
+            }
+          },
+          "summary": {
+            "totalScore": 7,
+            "totalPillars": 8,
+            "passedPillars": [
+              "Moat Test (ROIC > 20%)",
+              "Fortress Test (Debt/EBITDA < 2.5x)",
+              "Efficiency Test (Rule of 40)",
+              "Pricing Power Test (Gross Margin)",
+              "Capital Allocation Test (ROE)",
+              "Cash Generation Test (FCF)",
+              "Durability Test (Market Position)"
+            ],
+            "failedPillars": [
+              "Engine Test (Revenue CAGR > 10%)"
+            ],
+            "meetsFramework": true,
+            "rating": "Strong Compounder",
+            "recommendation": "Strong Buy"
+          },
+          "timestamp": "2025-08-12T06:58:02.230Z"
+        }
+      ],
+      "latestAnalysis": {
+        "symbol": "V",
+        "companyName": "Visa Inc.",
+        "sector": "Financial Services",
+        "industry": "Financial - Credit Services",
+        "analysisDate": "2025-08-12T06:55:42.817Z",
+        "pillars": {
+          "moat": {
+            "name": "Moat Test (ROIC > 20%)",
+            "value": 28.64665986658219,
+            "threshold": 20,
+            "passes": true,
+            "details": "ROIC: 28.65%"
+          },
+          "fortress": {
+            "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+            "value": 0,
+            "threshold": 2.5,
+            "passes": true,
+            "details": "Debt/EBITDA: 0.00x"
+          },
+          "engine": {
+            "name": "Engine Test (Revenue CAGR > 10%)",
+            "value": 7.019852738392451,
+            "threshold": 10,
+            "passes": false,
+            "details": "3-Year Revenue CAGR: 7.02%"
+          },
+          "efficiency": {
+            "name": "Efficiency Test (Rule of 40)",
+            "value": 81.25611483538287,
+            "threshold": 40,
+            "passes": true,
+            "details": "Rule of 40: 81.26% (Growth: 10.0% + EBITDA Margin: 71.2%)"
+          },
+          "pricingPower": {
+            "name": "Pricing Power Test (Gross Margin)",
+            "value": 80.3985971162946,
+            "threshold": 40,
+            "passes": true,
+            "details": "Gross Margin: 80.40% (Industry threshold: 40%)"
+          },
+          "capitalAllocation": {
+            "name": "Capital Allocation Test (ROE)",
+            "value": 50.4458696374275,
+            "threshold": 20,
+            "passes": true,
+            "details": "ROE: 50.45%"
+          },
+          "cashGeneration": {
+            "name": "Cash Generation Test (FCF)",
+            "value": 52.03195457328954,
+            "threshold": 15,
+            "passes": true,
+            "details": "FCF Margin: 52.03%, FCF Conversion: 94.68%"
+          },
+          "durability": {
+            "name": "Durability Test (Market Position)",
+            "value": 28.25677708554931,
+            "threshold": "Qualitative",
+            "passes": true,
+            "details": "P/E: 28.26, Market Cap: $557.87B"
+          }
+        },
+        "summary": {
+          "totalScore": 7,
+          "totalPillars": 8,
+          "passedPillars": [
+            "Moat Test (ROIC > 20%)",
+            "Fortress Test (Debt/EBITDA < 2.5x)",
+            "Efficiency Test (Rule of 40)",
+            "Pricing Power Test (Gross Margin)",
+            "Capital Allocation Test (ROE)",
+            "Cash Generation Test (FCF)",
+            "Durability Test (Market Position)"
+          ],
+          "failedPillars": [
+            "Engine Test (Revenue CAGR > 10%)"
+          ],
+          "meetsFramework": true,
+          "rating": "Strong Compounder",
+          "recommendation": "Strong Buy"
+        },
+        "timestamp": "2025-08-12T06:58:02.230Z"
+      },
+      "firstAdded": "2025-08-12T06:58:02.230Z",
+      "lastUpdated": "2025-08-12T06:58:02.230Z"
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "analyses": [
+        {
+          "symbol": "NVDA",
+          "companyName": "NVIDIA Corporation",
+          "sector": "Technology",
+          "industry": "Semiconductors",
+          "marketCap": 4442264000000,
+          "price": 182.06,
+          "analysisDate": "2025-08-12T07:03:06.776Z",
+          "pillars": {
+            "moat": {
+              "name": "Moat Test (ROIC > 20%)",
+              "value": 75.28431507492371,
+              "threshold": 20,
+              "passes": true,
+              "details": "ROIC: 75.28%"
+            },
+            "fortress": {
+              "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+              "value": 0,
+              "threshold": 2.5,
+              "passes": true,
+              "details": "Debt/EBITDA: 0.00x"
+            },
+            "engine": {
+              "name": "Engine Test (Revenue CAGR > 10%)",
+              "value": 69.1291209155383,
+              "threshold": 10,
+              "passes": true,
+              "details": "3-Year Revenue CAGR: 69.13%"
+            },
+            "efficiency": {
+              "name": "Efficiency Test (Rule of 40)",
+              "value": 180.21028902023994,
+              "threshold": 40,
+              "passes": true,
+              "details": "Rule of 40: 180.21% (Growth: 114.2% + EBITDA Margin: 66.0%)"
+            },
+            "pricingPower": {
+              "name": "Pricing Power Test (Gross Margin)",
+              "value": 74.98869705816992,
+              "threshold": 70,
+              "passes": true,
+              "details": "Gross Margin: 74.99% (Industry threshold: 70%)"
+            },
+            "capitalAllocation": {
+              "name": "Capital Allocation Test (ROE)",
+              "value": 91.87288060811576,
+              "threshold": 20,
+              "passes": true,
+              "details": "ROE: 91.87%"
+            },
+            "cashGeneration": {
+              "name": "Cash Generation Test (FCF)",
+              "value": 46.63172333463604,
+              "threshold": 15,
+              "passes": true,
+              "details": "FCF Margin: 46.63%, FCF Conversion: 83.50%"
+            },
+            "durability": {
+              "name": "Durability Test (Market Position)",
+              "value": 39.89850576289792,
+              "threshold": "Qualitative",
+              "passes": false,
+              "details": "P/E: 39.90, Market Cap: $2907.80B"
+            }
+          },
+          "summary": {
+            "totalScore": 7,
+            "totalPillars": 8,
+            "passedPillars": [
+              "Moat Test (ROIC > 20%)",
+              "Fortress Test (Debt/EBITDA < 2.5x)",
+              "Engine Test (Revenue CAGR > 10%)",
+              "Efficiency Test (Rule of 40)",
+              "Pricing Power Test (Gross Margin)",
+              "Capital Allocation Test (ROE)",
+              "Cash Generation Test (FCF)"
+            ],
+            "failedPillars": [
+              "Durability Test (Market Position)"
+            ],
+            "meetsFramework": true,
+            "rating": "Strong Compounder",
+            "recommendation": "Strong Buy"
+          },
+          "timestamp": "2025-08-12T07:03:06.782Z"
+        },
+        {
+          "symbol": "NVDA",
+          "companyName": "NVIDIA Corporation",
+          "sector": "Technology",
+          "industry": "Semiconductors",
+          "marketCap": 4442264000000,
+          "price": 182.06,
+          "analysisDate": "2025-08-12T07:03:27.632Z",
+          "pillars": {
+            "moat": {
+              "name": "Moat Test (ROIC > 20%)",
+              "value": 75.28431507492371,
+              "threshold": 20,
+              "passes": true,
+              "details": "ROIC: 75.28%"
+            },
+            "fortress": {
+              "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+              "value": 0,
+              "threshold": 2.5,
+              "passes": true,
+              "details": "Debt/EBITDA: 0.00x"
+            },
+            "engine": {
+              "name": "Engine Test (Revenue CAGR > 10%)",
+              "value": 69.1291209155383,
+              "threshold": 10,
+              "passes": true,
+              "details": "3-Year Revenue CAGR: 69.13%"
+            },
+            "efficiency": {
+              "name": "Efficiency Test (Rule of 40)",
+              "value": 180.21028902023994,
+              "threshold": 40,
+              "passes": true,
+              "details": "Rule of 40: 180.21% (Growth: 114.2% + EBITDA Margin: 66.0%)"
+            },
+            "pricingPower": {
+              "name": "Pricing Power Test (Gross Margin)",
+              "value": 74.98869705816992,
+              "threshold": 70,
+              "passes": true,
+              "details": "Gross Margin: 74.99% (Industry threshold: 70%)"
+            },
+            "capitalAllocation": {
+              "name": "Capital Allocation Test (ROE)",
+              "value": 91.87288060811576,
+              "threshold": 20,
+              "passes": true,
+              "details": "ROE: 91.87%"
+            },
+            "cashGeneration": {
+              "name": "Cash Generation Test (FCF)",
+              "value": 46.63172333463604,
+              "threshold": 15,
+              "passes": true,
+              "details": "FCF Margin: 46.63%, FCF Conversion: 83.50%"
+            },
+            "durability": {
+              "name": "Durability Test (Market Position)",
+              "value": 39.89850576289792,
+              "threshold": "Qualitative",
+              "passes": false,
+              "details": "P/E: 39.90, Market Cap: $2907.80B"
+            }
+          },
+          "summary": {
+            "totalScore": 7,
+            "totalPillars": 8,
+            "passedPillars": [
+              "Moat Test (ROIC > 20%)",
+              "Fortress Test (Debt/EBITDA < 2.5x)",
+              "Engine Test (Revenue CAGR > 10%)",
+              "Efficiency Test (Rule of 40)",
+              "Pricing Power Test (Gross Margin)",
+              "Capital Allocation Test (ROE)",
+              "Cash Generation Test (FCF)"
+            ],
+            "failedPillars": [
+              "Durability Test (Market Position)"
+            ],
+            "meetsFramework": true,
+            "rating": "Strong Compounder",
+            "recommendation": "Strong Buy"
+          },
+          "timestamp": "2025-08-12T07:03:27.634Z"
+        }
+      ],
+      "latestAnalysis": {
+        "symbol": "NVDA",
+        "companyName": "NVIDIA Corporation",
+        "sector": "Technology",
+        "industry": "Semiconductors",
+        "marketCap": 4442264000000,
+        "price": 182.06,
+        "analysisDate": "2025-08-12T07:03:27.632Z",
+        "pillars": {
+          "moat": {
+            "name": "Moat Test (ROIC > 20%)",
+            "value": 75.28431507492371,
+            "threshold": 20,
+            "passes": true,
+            "details": "ROIC: 75.28%"
+          },
+          "fortress": {
+            "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+            "value": 0,
+            "threshold": 2.5,
+            "passes": true,
+            "details": "Debt/EBITDA: 0.00x"
+          },
+          "engine": {
+            "name": "Engine Test (Revenue CAGR > 10%)",
+            "value": 69.1291209155383,
+            "threshold": 10,
+            "passes": true,
+            "details": "3-Year Revenue CAGR: 69.13%"
+          },
+          "efficiency": {
+            "name": "Efficiency Test (Rule of 40)",
+            "value": 180.21028902023994,
+            "threshold": 40,
+            "passes": true,
+            "details": "Rule of 40: 180.21% (Growth: 114.2% + EBITDA Margin: 66.0%)"
+          },
+          "pricingPower": {
+            "name": "Pricing Power Test (Gross Margin)",
+            "value": 74.98869705816992,
+            "threshold": 70,
+            "passes": true,
+            "details": "Gross Margin: 74.99% (Industry threshold: 70%)"
+          },
+          "capitalAllocation": {
+            "name": "Capital Allocation Test (ROE)",
+            "value": 91.87288060811576,
+            "threshold": 20,
+            "passes": true,
+            "details": "ROE: 91.87%"
+          },
+          "cashGeneration": {
+            "name": "Cash Generation Test (FCF)",
+            "value": 46.63172333463604,
+            "threshold": 15,
+            "passes": true,
+            "details": "FCF Margin: 46.63%, FCF Conversion: 83.50%"
+          },
+          "durability": {
+            "name": "Durability Test (Market Position)",
+            "value": 39.89850576289792,
+            "threshold": "Qualitative",
+            "passes": false,
+            "details": "P/E: 39.90, Market Cap: $2907.80B"
+          }
+        },
+        "summary": {
+          "totalScore": 7,
+          "totalPillars": 8,
+          "passedPillars": [
+            "Moat Test (ROIC > 20%)",
+            "Fortress Test (Debt/EBITDA < 2.5x)",
+            "Engine Test (Revenue CAGR > 10%)",
+            "Efficiency Test (Rule of 40)",
+            "Pricing Power Test (Gross Margin)",
+            "Capital Allocation Test (ROE)",
+            "Cash Generation Test (FCF)"
+          ],
+          "failedPillars": [
+            "Durability Test (Market Position)"
+          ],
+          "meetsFramework": true,
+          "rating": "Strong Compounder",
+          "recommendation": "Strong Buy"
+        },
+        "timestamp": "2025-08-12T07:03:27.634Z"
+      },
+      "firstAdded": "2025-08-12T07:03:06.781Z",
+      "lastUpdated": "2025-08-12T07:03:27.634Z"
+    },
+    "TSLA": {
+      "symbol": "TSLA",
+      "analyses": [
+        {
+          "symbol": "TSLA",
+          "companyName": "Tesla, Inc.",
+          "sector": "Consumer Cyclical",
+          "industry": "Auto - Manufacturers",
+          "marketCap": 1093524313500,
+          "price": 339.03,
+          "analysisDate": "2025-08-12T07:03:34.627Z",
+          "pillars": {
+            "moat": {
+              "name": "Moat Test (ROIC > 20%)",
+              "value": 5.833215799961096,
+              "threshold": 20,
+              "passes": false,
+              "details": "ROIC: 5.83%"
+            },
+            "fortress": {
+              "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+              "value": 0,
+              "threshold": 2.5,
+              "passes": true,
+              "details": "Debt/EBITDA: 0.00x"
+            },
+            "engine": {
+              "name": "Engine Test (Revenue CAGR > 10%)",
+              "value": 6.242516026669231,
+              "threshold": 10,
+              "passes": false,
+              "details": "3-Year Revenue CAGR: 6.24%"
+            },
+            "efficiency": {
+              "name": "Efficiency Test (Rule of 40)",
+              "value": 16.003367072884927,
+              "threshold": 40,
+              "passes": false,
+              "details": "Rule of 40: 16.00% (Growth: 0.9% + EBITDA Margin: 15.1%)"
+            },
+            "pricingPower": {
+              "name": "Pricing Power Test (Gross Margin)",
+              "value": 17.862626676220696,
+              "threshold": 50,
+              "passes": false,
+              "details": "Gross Margin: 17.86% (Industry threshold: 50%)"
+            },
+            "capitalAllocation": {
+              "name": "Capital Allocation Test (ROE)",
+              "value": 9.778777447094482,
+              "threshold": 20,
+              "passes": false,
+              "details": "ROE: 9.78%"
+            },
+            "cashGeneration": {
+              "name": "Cash Generation Test (FCF)",
+              "value": 3.665677141979732,
+              "threshold": 15,
+              "passes": false,
+              "details": "FCF Margin: 3.67%, FCF Conversion: 50.22%"
+            },
+            "durability": {
+              "name": "Durability Test (Market Position)",
+              "value": 181.98287798036463,
+              "threshold": "Qualitative",
+              "passes": false,
+              "details": "P/E: 181.98, Market Cap: $1297.54B"
+            }
+          },
+          "summary": {
+            "totalScore": 1,
+            "totalPillars": 8,
+            "passedPillars": [
+              "Fortress Test (Debt/EBITDA < 2.5x)"
+            ],
+            "failedPillars": [
+              "Moat Test (ROIC > 20%)",
+              "Engine Test (Revenue CAGR > 10%)",
+              "Efficiency Test (Rule of 40)",
+              "Pricing Power Test (Gross Margin)",
+              "Capital Allocation Test (ROE)",
+              "Cash Generation Test (FCF)",
+              "Durability Test (Market Position)"
+            ],
+            "meetsFramework": false,
+            "rating": "Weak Fundamentals",
+            "recommendation": "Avoid"
+          },
+          "timestamp": "2025-08-12T07:03:34.629Z"
+        }
+      ],
+      "latestAnalysis": {
+        "symbol": "TSLA",
+        "companyName": "Tesla, Inc.",
+        "sector": "Consumer Cyclical",
+        "industry": "Auto - Manufacturers",
+        "marketCap": 1093524313500,
+        "price": 339.03,
+        "analysisDate": "2025-08-12T07:03:34.627Z",
+        "pillars": {
+          "moat": {
+            "name": "Moat Test (ROIC > 20%)",
+            "value": 5.833215799961096,
+            "threshold": 20,
+            "passes": false,
+            "details": "ROIC: 5.83%"
+          },
+          "fortress": {
+            "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+            "value": 0,
+            "threshold": 2.5,
+            "passes": true,
+            "details": "Debt/EBITDA: 0.00x"
+          },
+          "engine": {
+            "name": "Engine Test (Revenue CAGR > 10%)",
+            "value": 6.242516026669231,
+            "threshold": 10,
+            "passes": false,
+            "details": "3-Year Revenue CAGR: 6.24%"
+          },
+          "efficiency": {
+            "name": "Efficiency Test (Rule of 40)",
+            "value": 16.003367072884927,
+            "threshold": 40,
+            "passes": false,
+            "details": "Rule of 40: 16.00% (Growth: 0.9% + EBITDA Margin: 15.1%)"
+          },
+          "pricingPower": {
+            "name": "Pricing Power Test (Gross Margin)",
+            "value": 17.862626676220696,
+            "threshold": 50,
+            "passes": false,
+            "details": "Gross Margin: 17.86% (Industry threshold: 50%)"
+          },
+          "capitalAllocation": {
+            "name": "Capital Allocation Test (ROE)",
+            "value": 9.778777447094482,
+            "threshold": 20,
+            "passes": false,
+            "details": "ROE: 9.78%"
+          },
+          "cashGeneration": {
+            "name": "Cash Generation Test (FCF)",
+            "value": 3.665677141979732,
+            "threshold": 15,
+            "passes": false,
+            "details": "FCF Margin: 3.67%, FCF Conversion: 50.22%"
+          },
+          "durability": {
+            "name": "Durability Test (Market Position)",
+            "value": 181.98287798036463,
+            "threshold": "Qualitative",
+            "passes": false,
+            "details": "P/E: 181.98, Market Cap: $1297.54B"
+          }
+        },
+        "summary": {
+          "totalScore": 1,
+          "totalPillars": 8,
+          "passedPillars": [
+            "Fortress Test (Debt/EBITDA < 2.5x)"
+          ],
+          "failedPillars": [
+            "Moat Test (ROIC > 20%)",
+            "Engine Test (Revenue CAGR > 10%)",
+            "Efficiency Test (Rule of 40)",
+            "Pricing Power Test (Gross Margin)",
+            "Capital Allocation Test (ROE)",
+            "Cash Generation Test (FCF)",
+            "Durability Test (Market Position)"
+          ],
+          "meetsFramework": false,
+          "rating": "Weak Fundamentals",
+          "recommendation": "Avoid"
+        },
+        "timestamp": "2025-08-12T07:03:34.629Z"
+      },
+      "firstAdded": "2025-08-12T07:03:34.629Z",
+      "lastUpdated": "2025-08-12T07:03:34.629Z"
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "analyses": [
+        {
+          "symbol": "AMZN",
+          "companyName": "Amazon.com, Inc.",
+          "sector": "Consumer Cyclical",
+          "industry": "Specialty Retail",
+          "marketCap": 2360142370000,
+          "price": 221.3,
+          "analysisDate": "2025-08-12T07:03:36.558Z",
+          "pillars": {
+            "moat": {
+              "name": "Moat Test (ROIC > 20%)",
+              "value": 13.315849265857754,
+              "threshold": 20,
+              "passes": false,
+              "details": "ROIC: 13.32%"
+            },
+            "fortress": {
+              "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+              "value": 0,
+              "threshold": 2.5,
+              "passes": true,
+              "details": "Debt/EBITDA: 0.00x"
+            },
+            "engine": {
+              "name": "Engine Test (Revenue CAGR > 10%)",
+              "value": 7.468537285355414,
+              "threshold": 10,
+              "passes": false,
+              "details": "3-Year Revenue CAGR: 7.47%"
+            },
+            "efficiency": {
+              "name": "Efficiency Test (Rule of 40)",
+              "value": 30.398879280315644,
+              "threshold": 40,
+              "passes": false,
+              "details": "Rule of 40: 30.40% (Growth: 11.0% + EBITDA Margin: 19.4%)"
+            },
+            "pricingPower": {
+              "name": "Pricing Power Test (Gross Margin)",
+              "value": 48.854393464156786,
+              "threshold": 50,
+              "passes": false,
+              "details": "Gross Margin: 48.85% (Industry threshold: 50%)"
+            },
+            "capitalAllocation": {
+              "name": "Capital Allocation Test (ROE)",
+              "value": 20.71825715984194,
+              "threshold": 20,
+              "passes": true,
+              "details": "ROE: 20.72%"
+            },
+            "cashGeneration": {
+              "name": "Cash Generation Test (FCF)",
+              "value": 5.1536227249713535,
+              "threshold": 15,
+              "passes": false,
+              "details": "FCF Margin: 5.15%, FCF Conversion: 55.49%"
+            },
+            "durability": {
+              "name": "Durability Test (Market Position)",
+              "value": 38.78057436537942,
+              "threshold": "Qualitative",
+              "passes": false,
+              "details": "P/E: 38.78, Market Cap: $2297.67B"
+            }
+          },
+          "summary": {
+            "totalScore": 2,
+            "totalPillars": 8,
+            "passedPillars": [
+              "Fortress Test (Debt/EBITDA < 2.5x)",
+              "Capital Allocation Test (ROE)"
+            ],
+            "failedPillars": [
+              "Moat Test (ROIC > 20%)",
+              "Engine Test (Revenue CAGR > 10%)",
+              "Efficiency Test (Rule of 40)",
+              "Pricing Power Test (Gross Margin)",
+              "Cash Generation Test (FCF)",
+              "Durability Test (Market Position)"
+            ],
+            "meetsFramework": false,
+            "rating": "Weak Fundamentals",
+            "recommendation": "Avoid"
+          },
+          "timestamp": "2025-08-12T07:03:36.559Z"
+        }
+      ],
+      "latestAnalysis": {
+        "symbol": "AMZN",
+        "companyName": "Amazon.com, Inc.",
+        "sector": "Consumer Cyclical",
+        "industry": "Specialty Retail",
+        "marketCap": 2360142370000,
+        "price": 221.3,
+        "analysisDate": "2025-08-12T07:03:36.558Z",
+        "pillars": {
+          "moat": {
+            "name": "Moat Test (ROIC > 20%)",
+            "value": 13.315849265857754,
+            "threshold": 20,
+            "passes": false,
+            "details": "ROIC: 13.32%"
+          },
+          "fortress": {
+            "name": "Fortress Test (Debt/EBITDA < 2.5x)",
+            "value": 0,
+            "threshold": 2.5,
+            "passes": true,
+            "details": "Debt/EBITDA: 0.00x"
+          },
+          "engine": {
+            "name": "Engine Test (Revenue CAGR > 10%)",
+            "value": 7.468537285355414,
+            "threshold": 10,
+            "passes": false,
+            "details": "3-Year Revenue CAGR: 7.47%"
+          },
+          "efficiency": {
+            "name": "Efficiency Test (Rule of 40)",
+            "value": 30.398879280315644,
+            "threshold": 40,
+            "passes": false,
+            "details": "Rule of 40: 30.40% (Growth: 11.0% + EBITDA Margin: 19.4%)"
+          },
+          "pricingPower": {
+            "name": "Pricing Power Test (Gross Margin)",
+            "value": 48.854393464156786,
+            "threshold": 50,
+            "passes": false,
+            "details": "Gross Margin: 48.85% (Industry threshold: 50%)"
+          },
+          "capitalAllocation": {
+            "name": "Capital Allocation Test (ROE)",
+            "value": 20.71825715984194,
+            "threshold": 20,
+            "passes": true,
+            "details": "ROE: 20.72%"
+          },
+          "cashGeneration": {
+            "name": "Cash Generation Test (FCF)",
+            "value": 5.1536227249713535,
+            "threshold": 15,
+            "passes": false,
+            "details": "FCF Margin: 5.15%, FCF Conversion: 55.49%"
+          },
+          "durability": {
+            "name": "Durability Test (Market Position)",
+            "value": 38.78057436537942,
+            "threshold": "Qualitative",
+            "passes": false,
+            "details": "P/E: 38.78, Market Cap: $2297.67B"
+          }
+        },
+        "summary": {
+          "totalScore": 2,
+          "totalPillars": 8,
+          "passedPillars": [
+            "Fortress Test (Debt/EBITDA < 2.5x)",
+            "Capital Allocation Test (ROE)"
+          ],
+          "failedPillars": [
+            "Moat Test (ROIC > 20%)",
+            "Engine Test (Revenue CAGR > 10%)",
+            "Efficiency Test (Rule of 40)",
+            "Pricing Power Test (Gross Margin)",
+            "Cash Generation Test (FCF)",
+            "Durability Test (Market Position)"
+          ],
+          "meetsFramework": false,
+          "rating": "Weak Fundamentals",
+          "recommendation": "Avoid"
+        },
+        "timestamp": "2025-08-12T07:03:36.559Z"
+      },
+      "firstAdded": "2025-08-12T07:03:36.559Z",
+      "lastUpdated": "2025-08-12T07:03:36.559Z"
+    }
+  },
+  "history": [
+    {
+      "action": "analysis_added",
+      "symbol": "AAPL",
+      "timestamp": "2025-08-12T06:58:02.228Z",
+      "score": 4,
+      "rating": "Mixed Signals"
+    },
+    {
+      "action": "analysis_added",
+      "symbol": "GOOGL",
+      "timestamp": "2025-08-12T06:58:02.229Z",
+      "score": 6,
+      "rating": "Quality Growth"
+    },
+    {
+      "action": "analysis_added",
+      "symbol": "MSFT",
+      "timestamp": "2025-08-12T06:58:02.229Z",
+      "score": 4,
+      "rating": "Mixed Signals"
+    },
+    {
+      "action": "analysis_added",
+      "symbol": "V",
+      "timestamp": "2025-08-12T06:58:02.230Z",
+      "score": 7,
+      "rating": "Strong Compounder"
+    },
+    {
+      "action": "analysis_added",
+      "symbol": "NVDA",
+      "timestamp": "2025-08-12T07:03:06.782Z",
+      "score": 7,
+      "rating": "Strong Compounder"
+    },
+    {
+      "action": "analysis_added",
+      "symbol": "NVDA",
+      "timestamp": "2025-08-12T07:03:27.634Z",
+      "score": 7,
+      "rating": "Strong Compounder"
+    },
+    {
+      "action": "analysis_added",
+      "symbol": "TSLA",
+      "timestamp": "2025-08-12T07:03:34.629Z",
+      "score": 1,
+      "rating": "Weak Fundamentals"
+    },
+    {
+      "action": "analysis_added",
+      "symbol": "AMZN",
+      "timestamp": "2025-08-12T07:03:36.559Z",
+      "score": 2,
+      "rating": "Weak Fundamentals"
+    }
+  ],
+  "watchlist": [
+    {
+      "symbol": "V",
+      "addedDate": "2025-08-12T06:58:02.275Z",
+      "notes": "High quality - Strong Compounder"
+    },
+    {
+      "symbol": "GOOGL",
+      "addedDate": "2025-08-12T06:58:02.276Z",
+      "notes": "High quality - Quality Growth"
+    },
+    {
+      "symbol": "NVDA",
+      "addedDate": "2025-08-12T07:03:27.636Z",
+      "notes": "Strong Compounder - Score: 7/8"
+    }
+  ],
+  "portfolio": [
+    {
+      "symbol": "V",
+      "shares": 100,
+      "purchasePrice": 150,
+      "purchaseDate": "2025-08-12T06:58:02.277Z",
+      "addedDate": "2025-08-12T06:58:02.277Z"
+    }
+  ],
+  "settings": {
+    "autoUpdate": false,
+    "updateInterval": 86400000,
+    "thresholds": {
+      "roic": 20,
+      "debtToEbitda": 2.5,
+      "revenueCagr": 10,
+      "ruleOf40": 40,
+      "grossMargin": 40,
+      "roe": 20,
+      "fcfMargin": 15,
+      "fcfConversion": 80
+    }
+  }
+}
