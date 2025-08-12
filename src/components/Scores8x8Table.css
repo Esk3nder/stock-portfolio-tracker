@@ -1,0 +1,288 @@
+.scores-8x8-table {
+  width: 100%;
+}
+
+.scores-loading,
+.scores-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #888;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(0, 255, 136, 0.1);
+  border-top: 3px solid #00ff88;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.scores-empty h2 {
+  color: #e0e0e0;
+  margin: 0 0 0.5rem 0;
+}
+
+.scores-empty p {
+  color: #888;
+}
+
+.table-header {
+  margin-bottom: 2rem;
+}
+
+.table-stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(26, 26, 46, 0.5);
+  border-radius: 8px;
+  border: 1px solid #2a2a4e;
+}
+
+.table-stats .stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.table-stats .stat-label {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.table-stats .stat-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00bbff;
+}
+
+.table-stats .stat-value.qualified {
+  color: #00ff88;
+}
+
+.table-stats .stat-value.eliminated {
+  color: #ff4444;
+}
+
+.table-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: rgba(26, 26, 46, 0.5);
+  border: 1px solid #2a2a4e;
+  color: #888;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+  color: #e0e0e0;
+  border-color: rgba(0, 255, 136, 0.3);
+}
+
+.filter-btn.active {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: #00ff88;
+  color: #00ff88;
+}
+
+.table-container {
+  overflow-x: auto;
+  background: rgba(26, 26, 46, 0.3);
+  border-radius: 12px;
+  border: 1px solid #2a2a4e;
+}
+
+.scores-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scores-table thead {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.scores-table th {
+  padding: 1rem;
+  text-align: left;
+  color: #aaa;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #2a2a4e;
+  white-space: nowrap;
+}
+
+.scores-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.scores-table th.sortable:hover {
+  color: #00ff88;
+}
+
+.scores-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s;
+}
+
+.scores-table tbody tr:hover {
+  background: rgba(0, 255, 136, 0.03);
+}
+
+.scores-table tbody tr.portfolio-row {
+  background: rgba(0, 255, 136, 0.05);
+  border-left: 3px solid #00ff88;
+}
+
+.scores-table tbody tr.eliminated-row {
+  opacity: 0.6;
+}
+
+.scores-table tbody tr.eliminated-row:hover {
+  opacity: 0.8;
+}
+
+.scores-table td {
+  padding: 0.75rem 1rem;
+  color: #e0e0e0;
+}
+
+.rank-col {
+  width: 50px;
+  text-align: center;
+  color: #888;
+}
+
+.portfolio-rank {
+  background: linear-gradient(45deg, #00ff88, #00bbff);
+  color: #0f0f1e;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.ticker-col {
+  width: 100px;
+  font-weight: 600;
+}
+
+.ticker {
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  color: #00bbff;
+}
+
+.name-col {
+  min-width: 200px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.sector-col {
+  width: 150px;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.score-col {
+  width: 80px;
+  text-align: center;
+}
+
+.total-score {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.total-score.high {
+  color: #00ff88;
+  background: rgba(0, 255, 136, 0.1);
+}
+
+.total-score.medium {
+  color: #ffaa00;
+  background: rgba(255, 170, 0, 0.1);
+}
+
+.total-score.low {
+  color: #ff6666;
+  background: rgba(255, 102, 102, 0.1);
+}
+
+.pillars-col {
+  min-width: 320px;
+}
+
+.status-col {
+  width: 120px;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status.qualified {
+  background: rgba(0, 255, 136, 0.1);
+  color: #00ff88;
+}
+
+.status.eliminated {
+  background: rgba(255, 68, 68, 0.1);
+  color: #ff6666;
+  cursor: help;
+}
+
+.status.below-min {
+  background: rgba(255, 170, 0, 0.1);
+  color: #ffaa00;
+}
+
+@media (max-width: 1200px) {
+  .table-container {
+    overflow-x: scroll;
+  }
+  
+  .scores-table {
+    min-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .table-filters {
+    justify-content: center;
+  }
+}

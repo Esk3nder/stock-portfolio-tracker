@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import './App.css';
 import Dashboard from './components/Dashboard';
+import Dashboard8x8 from './components/Dashboard8x8';
 import StockSearch from './components/StockSearch';
 import StockCard from './components/StockCard';
 import PortfolioSummary from './components/PortfolioSummary';
 import usePortfolio from './hooks/usePortfolio';
 
 function App() {
-  const [useNewUI, setUseNewUI] = useState(true);
+  const [uiMode, setUiMode] = useState('8x8'); // '8x8', 'pricing', 'legacy'
   
   const {
     stocks,
@@ -24,14 +25,14 @@ function App() {
     clearError
   } = usePortfolio();
 
-  // Show new Dashboard UI by default
-  if (useNewUI) {
+  // Show 8x8 Dashboard by default
+  if (uiMode === '8x8') {
     return (
       <div className="App">
-        <Dashboard />
-        <div style={{ position: 'fixed', bottom: 10, left: 10, zIndex: 1000 }}>
+        <Dashboard8x8 />
+        <div style={{ position: 'fixed', bottom: 10, left: 10, zIndex: 1000, display: 'flex', gap: '10px' }}>
           <button 
-            onClick={() => setUseNewUI(false)}
+            onClick={() => setUiMode('pricing')}
             style={{
               padding: '8px 16px',
               background: '#666',
@@ -41,7 +42,58 @@ function App() {
               cursor: 'pointer'
             }}
           >
-            Switch to Legacy UI
+            Pricing Power UI
+          </button>
+          <button 
+            onClick={() => setUiMode('legacy')}
+            style={{
+              padding: '8px 16px',
+              background: '#444',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }}
+          >
+            Legacy UI
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Show Pricing Power Dashboard
+  if (uiMode === 'pricing') {
+    return (
+      <div className="App">
+        <Dashboard />
+        <div style={{ position: 'fixed', bottom: 10, left: 10, zIndex: 1000, display: 'flex', gap: '10px' }}>
+          <button 
+            onClick={() => setUiMode('8x8')}
+            style={{
+              padding: '8px 16px',
+              background: '#00ff88',
+              color: '#0f0f1e',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontWeight: 'bold'
+            }}
+          >
+            8×8 Framework
+          </button>
+          <button 
+            onClick={() => setUiMode('legacy')}
+            style={{
+              padding: '8px 16px',
+              background: '#666',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }}
+          >
+            Legacy UI
           </button>
         </div>
       </div>
@@ -54,20 +106,35 @@ function App() {
       <header className="App-header">
         <h1>Stock Portfolio Tracker</h1>
         <p>Track your investments in real-time</p>
-        <button 
-          onClick={() => setUseNewUI(true)}
-          style={{
-            padding: '8px 16px',
-            background: '#4caf50',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            marginTop: '10px'
-          }}
-        >
-          Switch to New Pricing Power UI
-        </button>
+        <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
+          <button 
+            onClick={() => setUiMode('8x8')}
+            style={{
+              padding: '8px 16px',
+              background: '#00ff88',
+              color: '#0f0f1e',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontWeight: 'bold'
+            }}
+          >
+            8×8 Framework
+          </button>
+          <button 
+            onClick={() => setUiMode('pricing')}
+            style={{
+              padding: '8px 16px',
+              background: '#4caf50',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }}
+          >
+            Pricing Power UI
+          </button>
+        </div>
       </header>
 
       <main className="App-main">
