@@ -1,0 +1,170 @@
+INFO:     Will watch for changes in these directories: ['/Users/esk3nder/Desktop/Developer/stAIcks/stock-portfolio-tracker-1/.conductor/little-rock/backend']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [94814] using StatReload
+INFO:     Started server process [94821]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Database initialized
+INFO:     127.0.0.1:63576 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63820 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63822 - "GET /scores HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63824 - "GET /portfolio HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63845 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63847 - "GET /scores HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63849 - "GET /portfolio HTTP/1.1" 404 Not Found
+Starting rebalance for 20 stocks...
+
+Optimizing portfolio...
+INFO:     127.0.0.1:63851 - "POST /rebalance HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64116 - "GET /scores HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64118 - "GET /portfolio HTTP/1.1" 404 Not Found
+WARNING:  StatReload detected changes in 'providers.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [94821]
+INFO:     Started server process [4496]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'providers.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [4496]
+Database initialized
+INFO:     Started server process [4860]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'providers.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [4860]
+Database initialized
+INFO:     Started server process [5274]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'providers.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [5274]
+Database initialized
+INFO:     Started server process [5556]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Failed to get ticker 'MSFT' reason: Expecting value: line 1 column 1 (char 0)
+MSFT: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'GOOGL' reason: Expecting value: line 1 column 1 (char 0)
+GOOGL: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'META' reason: Expecting value: line 1 column 1 (char 0)
+META: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'CRM' reason: Expecting value: line 1 column 1 (char 0)
+CRM: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'ADBE' reason: Expecting value: line 1 column 1 (char 0)
+ADBE: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'AMZN' reason: Expecting value: line 1 column 1 (char 0)
+AMZN: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'NFLX' reason: Expecting value: line 1 column 1 (char 0)
+NFLX: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'NKE' reason: Expecting value: line 1 column 1 (char 0)
+NKE: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'SBUX' reason: Expecting value: line 1 column 1 (char 0)
+SBUX: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'MCD' reason: Expecting value: line 1 column 1 (char 0)
+MCD: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'V' reason: Expecting value: line 1 column 1 (char 0)
+V: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'MA' reason: Expecting value: line 1 column 1 (char 0)
+MA: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'JPM' reason: Expecting value: line 1 column 1 (char 0)
+JPM: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'GS' reason: Expecting value: line 1 column 1 (char 0)
+GS: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'BRK-B' reason: Expecting value: line 1 column 1 (char 0)
+BRK-B: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'UNH' reason: Expecting value: line 1 column 1 (char 0)
+UNH: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'JNJ' reason: Expecting value: line 1 column 1 (char 0)
+JNJ: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'PFE' reason: Expecting value: line 1 column 1 (char 0)
+PFE: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'TMO' reason: Expecting value: line 1 column 1 (char 0)
+TMO: No price data found, symbol may be delisted (period=6mo)
+Failed to get ticker 'ABT' reason: Expecting value: line 1 column 1 (char 0)
+ABT: No price data found, symbol may be delisted (period=6mo)
+Database initialized
+Starting rebalance for 20 stocks...
+Using mock data for MSFT fundamentals (no data available)
+Using mock data for MSFT prices (no data available)
+Processed MSFT: Score=36.97, Vol=0.196
+Using mock data for GOOGL fundamentals (no data available)
+Using mock data for GOOGL prices (no data available)
+Processed GOOGL: Score=63.56, Vol=0.386
+Using mock data for META fundamentals (no data available)
+Using mock data for META prices (no data available)
+Processed META: Score=72.76, Vol=0.239
+Using mock data for CRM fundamentals (no data available)
+Using mock data for CRM prices (no data available)
+Processed CRM: Score=63.40, Vol=0.432
+Using mock data for ADBE fundamentals (no data available)
+Using mock data for ADBE prices (no data available)
+Processed ADBE: Score=88.50, Vol=0.337
+Using mock data for AMZN fundamentals (no data available)
+Using mock data for AMZN prices (no data available)
+Processed AMZN: Score=57.60, Vol=0.226
+Using mock data for NFLX fundamentals (no data available)
+Using mock data for NFLX prices (no data available)
+Processed NFLX: Score=52.52, Vol=0.335
+Using mock data for NKE fundamentals (no data available)
+Using mock data for NKE prices (no data available)
+Processed NKE: Score=56.02, Vol=0.237
+Using mock data for SBUX fundamentals (no data available)
+Using mock data for SBUX prices (no data available)
+Processed SBUX: Score=73.33, Vol=0.368
+Using mock data for MCD fundamentals (no data available)
+Using mock data for MCD prices (no data available)
+Processed MCD: Score=45.62, Vol=0.461
+Using mock data for V fundamentals (no data available)
+Using mock data for V prices (no data available)
+Processed V: Score=18.14, Vol=0.174
+Using mock data for MA fundamentals (no data available)
+Using mock data for MA prices (no data available)
+Processed MA: Score=79.81, Vol=0.421
+Using mock data for JPM fundamentals (no data available)
+Using mock data for JPM prices (no data available)
+Processed JPM: Score=98.80, Vol=0.436
+Using mock data for GS fundamentals (no data available)
+Using mock data for GS prices (no data available)
+Processed GS: Score=50.99, Vol=0.449
+Using mock data for BRK-B fundamentals (no data available)
+Using mock data for BRK-B prices (no data available)
+Processed BRK-B: Score=57.96, Vol=0.312
+Using mock data for UNH fundamentals (no data available)
+Using mock data for UNH prices (no data available)
+Processed UNH: Score=62.09, Vol=0.315
+Using mock data for JNJ fundamentals (no data available)
+Using mock data for JNJ prices (no data available)
+Processed JNJ: Score=63.40, Vol=0.432
+Using mock data for PFE fundamentals (no data available)
+Using mock data for PFE prices (no data available)
+Processed PFE: Score=51.11, Vol=0.268
+Using mock data for TMO fundamentals (no data available)
+Using mock data for TMO prices (no data available)
+Processed TMO: Score=48.61, Vol=0.173
+Using mock data for ABT fundamentals (no data available)
+Using mock data for ABT prices (no data available)
+Processed ABT: Score=36.48, Vol=0.426
+
+Optimizing portfolio...
+INFO:     127.0.0.1:64441 - "POST /rebalance HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64842 - "GET /scores HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64868 - "GET /portfolio HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65001 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65001 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:65018 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65018 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65019 - "GET /scores HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65019 - "GET /scores HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65018 - "GET /portfolio HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65019 - "GET /portfolio HTTP/1.1" 200 OK

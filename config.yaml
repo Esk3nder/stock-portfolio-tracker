@@ -1,0 +1,40 @@
+app:
+  name: "Pricing Power Portfolio MVP"
+  version: "0.1.0"
+  
+scoring:
+  economics_weight: 0.6
+  pricing_power_weight: 0.4
+  min_score_threshold: 50.0
+  
+  # Normalization ranges
+  roic_range: [0, 30]
+  fcf_margin_range: [0, 25]
+  revenue_growth_range: [-10, 30]
+  gross_margin_range: [20, 60]
+  
+  # Penalties
+  negative_fcf_penalty: 20
+  
+optimizer:
+  alpha: 2.0  # Power factor for scores
+  max_position_size: 0.05  # 5% max per stock
+  min_positions: 10
+  max_positions: 25
+  
+universe:
+  test_tickers:
+    tech: ["MSFT", "GOOGL", "META", "CRM", "ADBE"]
+    consumer: ["AMZN", "NFLX", "NKE", "SBUX", "MCD"]
+    finance: ["V", "MA", "JPM", "GS", "BRK-B"]
+    healthcare: ["UNH", "JNJ", "PFE", "TMO", "ABT"]
+    
+data:
+  price_lookback_period: "6mo"
+  fundamentals_quarters: 4
+  min_data_points: 20  # For volatility calculation
+  
+api:
+  cors_origins: ["http://localhost:3000"]
+  rate_limit: 100  # requests per minute
+  cache_ttl: 300  # seconds

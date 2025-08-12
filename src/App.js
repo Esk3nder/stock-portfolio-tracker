@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import Dashboard from './components/Dashboard';
 import StockSearch from './components/StockSearch';
 import StockCard from './components/StockCard';
 import PortfolioSummary from './components/PortfolioSummary';
 import usePortfolio from './hooks/usePortfolio';
 
 function App() {
+  const [useNewUI, setUseNewUI] = useState(true);
+  
   const {
     stocks,
     shares,
@@ -21,11 +24,50 @@ function App() {
     clearError
   } = usePortfolio();
 
+  // Show new Dashboard UI by default
+  if (useNewUI) {
+    return (
+      <div className="App">
+        <Dashboard />
+        <div style={{ position: 'fixed', bottom: 10, left: 10, zIndex: 1000 }}>
+          <button 
+            onClick={() => setUseNewUI(false)}
+            style={{
+              padding: '8px 16px',
+              background: '#666',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }}
+          >
+            Switch to Legacy UI
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Legacy UI
   return (
     <div className="App">
       <header className="App-header">
         <h1>Stock Portfolio Tracker</h1>
         <p>Track your investments in real-time</p>
+        <button 
+          onClick={() => setUseNewUI(true)}
+          style={{
+            padding: '8px 16px',
+            background: '#4caf50',
+            color: 'white',
+            border: 'none',
+            borderRadius: '4px',
+            cursor: 'pointer',
+            marginTop: '10px'
+          }}
+        >
+          Switch to New Pricing Power UI
+        </button>
       </header>
 
       <main className="App-main">
