@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import ScoreTable from './ScoreTable';
-import PortfolioPie from './PortfolioPie';
-import RebalancePanel from './RebalancePanel';
+import EightPillarsScreen from './EightPillarsScreen';
+import EightPillarsDashboard from './EightPillarsDashboard';
+import EightPillarsPortfolio from './EightPillarsPortfolio';
+import EightPillarsGuide from './EightPillarsGuide';
 import portfolioApi from '../services/portfolioApi';
 import './Dashboard.css';
 
 const Dashboard = () => {
-  const [activeTab, setActiveTab] = useState('scores');
+  const [activeTab, setActiveTab] = useState('screening');
   const [scores, setScores] = useState(null);
   const [portfolio, setPortfolio] = useState(null);
+  const [eightPillarsAnalysis] = useState(null);
+  const [eightPillarsScreening] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [apiStatus, setApiStatus] = useState('checking');
@@ -64,10 +67,13 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <header className="dashboard-header">
-        <h1>Pricing Power Portfolio</h1>
+        <div className="header-content">
+          <h1>Eight Pillars Elite Stock Screener</h1>
+          <p className="header-subtitle">Systematic Framework for Identifying Elite Compounding Equities</p>
+        </div>
         <div className="api-status">
           <span className={`status-indicator ${apiStatus}`}></span>
-          <span>API: {apiStatus}</span>
+          <span>Data: {apiStatus}</span>
         </div>
       </header>
 
@@ -80,42 +86,61 @@ const Dashboard = () => {
 
       <nav className="dashboard-nav">
         <button
-          className={`nav-tab ${activeTab === 'scores' ? 'active' : ''}`}
-          onClick={() => setActiveTab('scores')}
+          className={`nav-tab ${activeTab === 'screening' ? 'active' : ''}`}
+          onClick={() => setActiveTab('screening')}
         >
-          Stock Scores
+          <span className="tab-icon">🔍</span>
+          <span className="tab-label">Screening</span>
+        </button>
+        <button
+          className={`nav-tab ${activeTab === 'dashboard' ? 'active' : ''}`}
+          onClick={() => setActiveTab('dashboard')}
+        >
+          <span className="tab-icon">📊</span>
+          <span className="tab-label">Analytics</span>
         </button>
         <button
           className={`nav-tab ${activeTab === 'portfolio' ? 'active' : ''}`}
           onClick={() => setActiveTab('portfolio')}
         >
-          Portfolio
+          <span className="tab-icon">💼</span>
+          <span className="tab-label">Portfolio</span>
         </button>
         <button
-          className={`nav-tab ${activeTab === 'rebalance' ? 'active' : ''}`}
-          onClick={() => setActiveTab('rebalance')}
+          className={`nav-tab ${activeTab === 'framework' ? 'active' : ''}`}
+          onClick={() => setActiveTab('framework')}
         >
-          Rebalance
+          <span className="tab-icon">📚</span>
+          <span className="tab-label">Framework</span>
         </button>
       </nav>
 
       <div className="dashboard-content">
-        {activeTab === 'scores' && (
-          <ScoreTable scores={scores} loading={loading} />
+        {activeTab === 'screening' && (
+          <EightPillarsScreen />
+        )}
+        
+        {activeTab === 'dashboard' && (
+          <EightPillarsDashboard 
+            analysis={eightPillarsAnalysis} 
+            screeningResults={eightPillarsScreening}
+          />
         )}
         
         {activeTab === 'portfolio' && (
-          <PortfolioPie portfolio={portfolio} loading={loading} />
+          <EightPillarsPortfolio 
+            portfolio={portfolio}
+            scores={scores}
+            loading={loading}
+            onRebalanceComplete={handleRebalanceComplete}
+          />
         )}
         
-        {activeTab === 'rebalance' && (
-          <RebalancePanel onRebalanceComplete={handleRebalanceComplete} />
+        {activeTab === 'framework' && (
+          <EightPillarsGuide />
         )}
       </div>
 
-      <button className="refresh-button" onClick={loadData} disabled={loading}>
-        {loading ? 'Loading...' : 'Refresh Data'}
-      </button>
     </div>
   );
 };
