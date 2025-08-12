@@ -35,3 +35,7 @@ class RebalanceResponse(BaseModel):
 
 class TickerList(BaseModel):
     tickers: List[str]
+
+class RebalanceRequest(BaseModel):
+    universe: str = "test"
+    tickers: Optional[List[str]] = None

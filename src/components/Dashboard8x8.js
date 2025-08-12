@@ -67,17 +67,22 @@ const Dashboard8x8 = () => {
     }
   };
 
-  const handleRebalance = async (universe = 'test') => {
+  const handleRebalance = async (params) => {
     setLoading(true);
     setError(null);
     
     try {
+      // Handle different parameter formats
+      const requestBody = typeof params === 'string' 
+        ? { universe: params }
+        : params;
+      
       const response = await fetch('http://localhost:8000/api/rebalance-8x8', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ universe })
+        body: JSON.stringify(requestBody)
       });
       
       if (!response.ok) {

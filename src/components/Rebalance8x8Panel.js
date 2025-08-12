@@ -6,6 +6,8 @@ const Rebalance8x8Panel = ({ onRebalance, loading }) => {
   const [isRebalancing, setIsRebalancing] = useState(false);
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
+  const [manualTickers, setManualTickers] = useState('');
+  const [showManualInput, setShowManualInput] = useState(false);
 
   const handleRebalance = async () => {
     setIsRebalancing(true);
@@ -13,10 +15,18 @@ const Rebalance8x8Panel = ({ onRebalance, loading }) => {
     setResult(null);
 
     try {
-      const rebalanceResult = await onRebalance(universe);
+      let params = { universe };
+      if (universe === 'manual' && manualTickers) {
+        const tickers = manualTickers.split(',').map(t => t.trim().toUpperCase()).filter(t => t);
+        if (tickers.length === 0) {
+          throw new Error('Please enter at least one ticker');
+        }
+        params = { universe: 'manual', tickers };
+      }
+      const rebalanceResult = await onRebalance(params);
       setResult(rebalanceResult);
     } catch (err) {
-      setError('Rebalance failed. Please check the console for details.');
+      setError(err.message || 'Rebalance failed. Please check the console for details.');
     } finally {
       setIsRebalancing(false);
     }
@@ -35,7 +45,7 @@ const Rebalance8x8Panel = ({ onRebalance, loading }) => {
           <div className="universe-options">
             <button
               className={`universe-option ${universe === 'test' ? 'active' : ''}`}
-              onClick={() => setUniverse('test')}
+              onClick={() => { setUniverse('test'); setShowManualInput(false); }}
               disabled={isRebalancing}
             >
               <span className="option-icon">🧪</span>
@@ -43,15 +53,41 @@ const Rebalance8x8Panel = ({ onRebalance, loading }) => {
               <span className="option-count">~70 stocks</span>
             </button>
             <button
-              className={`universe-option ${universe === 'sp500' ? 'active' : ''}`}
-              onClick={() => setUniverse('sp500')}
+              className={`universe-option ${universe === 'manual' ? 'active' : ''}`}
+              onClick={() => { setUniverse('manual'); setShowManualInput(true); }}
               disabled={isRebalancing}
             >
-              <span className="option-icon">🏛️</span>
-              <span className="option-label">S&P 500</span>
-              <span className="option-count">500 stocks</span>
+              <span className="option-icon">✏️</span>
+              <span className="option-label">Manual Entry</span>
+              <span className="option-count">Custom list</span>
+            </button>
+            <button
+              className={`universe-option ${universe === 'cached' ? 'active' : ''}`}
+              onClick={() => { setUniverse('cached'); setShowManualInput(false); }}
+              disabled={isRebalancing}
+            >
+              <span className="option-icon">💾</span>
+              <span className="option-label">Cached Stocks</span>
+              <span className="option-count">Previously analyzed</span>
             </button>
           </div>
+          
+          {showManualInput && (
+            <div className="manual-input-section">
+              <label>Enter Stock Tickers (comma-separated):</label>
+              <textarea
+                className="manual-tickers-input"
+                value={manualTickers}
+                onChange={(e) => setManualTickers(e.target.value)}
+                placeholder="e.g., AAPL, MSFT, GOOGL, NVDA, TSLA"
+                disabled={isRebalancing}
+                rows={3}
+              />
+              <div className="input-hint">
+                💡 Enter up to 20 tickers for analysis. Separate with commas.
+              </div>
+            </div>
+          )}
         </div>
 
         <button
@@ -136,6 +172,15 @@ const Rebalance8x8Panel = ({ onRebalance, loading }) => {
           <li>Calculates weights using (Score - 30) / Total formula</li>
           <li>Saves portfolio for tracking and monitoring</li>
         </ol>
+        
+        <div className="universe-info">
+          <h4>📊 Universe Options</h4>
+          <ul>
+            <li><strong>Test Universe:</strong> Pre-selected ~70 high-quality stocks for testing</li>
+            <li><strong>Manual Entry:</strong> Enter your own list of stocks to analyze</li>
+            <li><strong>Cached Stocks:</strong> Use previously analyzed stocks from database</li>
+          </ul>
+        </div>
 
         <div className="schedule-info">
           <h4>📅 Rebalancing Schedule</h4>
