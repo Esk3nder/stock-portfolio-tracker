@@ -89,6 +89,52 @@
   color: #888;
 }
 
+.manual-input-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.manual-input-section label {
+  display: block;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.manual-tickers-input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  color: #e0e0e0;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s;
+}
+
+.manual-tickers-input:focus {
+  outline: none;
+  border-color: #00ff88;
+  background: rgba(0, 255, 136, 0.05);
+}
+
+.manual-tickers-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input-hint {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
 .rebalance-button {
   width: 100%;
   background: linear-gradient(45deg, #00ff88, #00bbff);
@@ -308,6 +354,27 @@
 }
 
 .schedule-info strong {
+  color: #e0e0e0;
+}
+
+.universe-info {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.universe-info h4 {
+  color: #00bbff;
+  margin: 0 0 1rem 0;
+}
+
+.universe-info ul {
+  color: #aaa;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+}
+
+.universe-info strong {
   color: #e0e0e0;
 }
 

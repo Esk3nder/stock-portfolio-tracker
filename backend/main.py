@@ -7,7 +7,7 @@ from typing import List
 from database import get_db, init_db, Security, Fundamental, Price, Score, PillarScores, Portfolio8x8
 from models import (
     ScoresResponse, PortfolioResponse, RebalanceResponse,
-    StockScore, PortfolioWeight
+    StockScore, PortfolioWeight, RebalanceRequest
 )
 from providers import DataProvider
 from scoring import ScoringEngine
@@ -226,19 +226,49 @@ async def health_check():
 
 # ==================== 8x8 Framework Endpoints ====================
 
+@app.get("/api/cached-stocks")
+async def get_cached_stocks(db: Session = Depends(get_db)):
+    """Get list of cached stocks that have been analyzed"""
+    try:
+        # Get unique tickers from PillarScores table
+        recent_scores = db.query(PillarScores.ticker, PillarScores.total_score).distinct(PillarScores.ticker).order_by(PillarScores.ticker).all()
+        
+        cached_stocks = [{
+            "ticker": score.ticker,
+            "total_score": score.total_score
+        } for score in recent_scores]
+        
+        return {
+            "cached_stocks": cached_stocks,
+            "count": len(cached_stocks)
+        }
+    except Exception as e:
+        print(f"Error fetching cached stocks: {e}")
+        return {"cached_stocks": [], "count": 0}
+
 @app.post("/api/rebalance-8x8")
-async def rebalance_8x8(universe: str = "test", db: Session = Depends(get_db)):
+async def rebalance_8x8(request: RebalanceRequest, db: Session = Depends(get_db)):
     """Execute 8x8 Framework rebalancing"""
     try:
         run_date = datetime.now()
         
         # Get universe of stocks
-        if universe == "sp500":
-            tickers = data_provider_8x8.get_sp500_universe()
+        if request.universe == "manual" and request.tickers:
+            # Use manually provided tickers
+            tickers = request.tickers[:20]  # Limit to 20 stocks for API protection
+        elif request.universe == "cached":
+            # Use previously analyzed stocks from database
+            recent_scores = db.query(PillarScores).distinct(PillarScores.ticker).limit(100).all()
+            tickers = [score.ticker for score in recent_scores]
+            if not tickers:
+                tickers = data_provider_8x8.get_test_universe_8x8()
+        elif request.universe == "sp500":
+            # WARNING: This will make 500 API calls
+            tickers = data_provider_8x8.get_sp500_universe()[:50]  # Limit to 50 for safety
         else:
             tickers = data_provider_8x8.get_test_universe_8x8()
         
-        print(f"Starting 8x8 rebalance for {len(tickers)} stocks in {universe} universe...")
+        print(f"Starting 8x8 rebalance for {len(tickers)} stocks in {request.universe} universe...")
         
         # Score all stocks
         all_scores = []
